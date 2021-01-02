@@ -1,11 +1,8 @@
 function titleCaseEdit(title) {
   // Insert code here;  
-  var newTitle = title.split("");
-
-  for (i = 0; i < newTitle.length; i++) {
-     newTitle[i] = newTitle[i][0].toUpperCase() + newTitle[i].substr(1);
-  }
-  return newTitle.join("");
+  return title.toLowerCase().replace(/(^|\s)\S/g, function(newTitle) {
+        return newTitle.toUpperCase()
+  });
 }
 
 // Do not edit this line;
